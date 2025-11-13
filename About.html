@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Resturant</title>
+    
+    <link rel="shortcut icon" href="./assets/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="About.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+    body{
+        background-color: #ff6c00 ;
+    }
+    form{
+        background-color: #123;
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 30px;
+        border-radius: 30px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        
+    }
+    h2{
+        font-size: 50px;
+        color: #ff6c00;
+        margin-bottom: 20px;
+    }
+    .input_form{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+    .input_form label{
+        margin-bottom: 15px;
+    }
+    .input_form input, textarea{
+        padding: 10px;
+        border-radius: 20px;
+        border: none;
+        font-size: 1rem;
+        color: black;
+    }
+    button{
+        font-size: 20px;
+        background-color: #ff6c00;
+        border: none;
+        border-radius: 20px;
+        width: 110px;
+        height: 40px;
+        text-align: center;
+        align-items: center;
+    }
+    button:hover{
+        background-color: #9b5320bc;
+    }
+
+    @media (max-width:920px) {
+    form{
+        margin: 80px;
+    }
+    
+}
+</style>
+<body>
+    <div id="navbar"></div>
+
+    <form action="https://formspree.io/f/xwpovlje" method="POST">
+        <img src="./assets/logo.png" alt="logo" style="rotate: 315deg;">
+
+        <h2>Send Me a Massege</h2>
+        <div id="input_form" class="input_form">
+            <label for="name">Name:</label>
+            <input type="text" placeholder="Enter Your Name:" name="Name">
+        </div>
+        <div id="input_form" class="input_form">
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Enter Your Name:" name="Email">
+        </div>
+        <div id="input_form" class="input_form">
+            <label for="number">Phone Number:</label>
+            <input type="number" placeholder="Enter Your Name:" name="Number">
+        </div>
+        <div id="input_form" class="input_form">
+            <label for="text">Messege:</label>
+            <textarea name="messege" placeholder="Enter Your Messege" id="messege"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+        
+    </form>
+    </body>
+<script src="nav.js"></script>
+</html>

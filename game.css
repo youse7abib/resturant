@@ -1,0 +1,48 @@
+body{
+    background-color: #111;
+}
+.game_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem;
+    height: 100vh;
+}
+h1{
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: #ff6c00;
+}
+.point{
+    font-size: 24px;
+    margin-bottom: 50px;
+    background-color: green;
+}
+.food_img{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border-radius: 20px;
+}
+
+#bigImg{
+    display: none;
+    margin-top: -150px;
+    cursor: pointer;
+    width: 700px;
+    z-index: 99999999;
+}
+h2{
+    font-size: 80px;
+    z-index: 99999999999999999;
+    color: gold;
+    background-color: #ac0a81;
+    display: none;
+    position: fixed;
+}
+h3{
+    font-style: italic;
+    color: blue;
+    margin-bottom: 10px;
+}

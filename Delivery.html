@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery | Resturant</title>
+</head>
+<style>
+    .main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row-reverse;
+        padding: 60px 40px;
+        gap: 80px;
+    }
+    .main .img{
+
+        background-color: #ff6c00;
+        padding: 20px;
+        border-radius: 30px;
+    }
+    .main .img img{
+         width: 350px;
+        height: auto;
+        border-radius: 20px;
+    }
+    .main .delivary_words{
+        display: flex;
+        flex-direction: column;
+        font-size: 400px;
+    }
+    .delivary_words h2{
+        
+        /* border-radius: 30px;
+        margin-bottom: 50px;
+        display: flex;
+         justify-content: center;
+        align-items: center; */
+        font-size: 36px;
+        color: #ff6c00 !important;
+        line-height: 1.3;
+    }
+    .delivary_words p{
+        font-size: 20px;
+        margin-bottom: 25px;
+        background-color: green;
+        width: max-content;
+        border-radius: 20px;
+    }
+
+    .delivary_words a{
+        text-decoration: none;
+        background-color: #ff6c00;
+        color: white;
+        padding: 12px 30px;
+        border-radius: 25px;
+        width: fit-content;
+        font-size: 20px;
+        font-weight: bold;
+        transition: 1s;
+    }
+    .delivary_words a:hover{
+        background-color: green;
+    }
+
+    @media (max-width:922px) {
+        .main{
+            flex-direction: column;
+            gap: 40px;
+            padding: 40px 20px;
+            margin: 50px;
+        }        
+        .main .img img{
+            width: 300px;
+        }
+    }
+
+     @media (max-width:510px) {
+        .main{
+            flex-direction: column;
+            gap: 30px;
+            padding: 30px 20px;
+            margin: 50px;
+        }        
+        .main .img img{
+            width: 250px;
+        }
+    }
+</style>
+<body>
+    <div id="navbar"></div>
+    <div class="main">
+        <div class="img">
+            <img src="./assets/delivary.png" alt="delivary">
+        </div>
+        <div class="delivary_words">
+            <h2>Trust in The Fastest & Most Reliable Delivery Service</h2>
+            <p>
+                Do not hestate to order from our website, hope you enjoy.
+            </p>
+            <a href="menu.html">Order Now</a>
+        </div>
+    </div>
+</body>
+<script src="nav.js"></script>
+</html>

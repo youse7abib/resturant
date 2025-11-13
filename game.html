@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game | Resturant</title>
+    <link rel="shortcut icon" href="./assets/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <div class="game_content">
+        <h1>Food Game | Resturant</h1>
+        <h3>(click the photo and take a point)</h3>
+        <div class="point" id="points">Points: 0</div>
+        <img class="food_img" id="food" src="./assets/spagetii.png" alt="spagetii">
+        <img src="./assets/pizza1.png" id="bigImg" alt="">
+        <h2 id="win">Your win</h2>
+    </div>
+
+    
+
+</body>
+<script>
+    let food = document.getElementById('food');
+    let pointDisplay = document.getElementById('points');
+    let BigImg= document.getElementById('bigImg');
+    let win = document.getElementById('win')
+    let foods = [
+        "./assets/bg.png",
+        "./assets/chesee.png",
+        "./assets/chicken.png",
+        "./assets/chili.png",
+        "./assets/creamy.png",
+        "./assets/doubleRoyale.png",
+        "./assets/falafel.png",
+        "./assets/fav.png",
+        "./assets/fries.png",
+        "./assets/grilic.png",
+        "./assets/ice.png",
+        "./assets/koshari.png",
+        "./assets/lemon.png",
+        "./assets/mango.png",
+        "./assets/onion.png",
+        "./assets/phyilly.png",
+        "./assets/pizza1.png",
+        "./assets/shrimp.png",
+        "./assets/strobary2.png",
+        "./assets/spagetii.png",
+    ];
+
+    let points = localStorage.getItem('foodPoints') ? parseInt(localStorage.getItem('foodPoints')) : 0;
+    pointDisplay.textContent = 'Points' + points;
+
+    food.addEventListener('click', () =>{
+        points++;
+        pointDisplay.textContent = 'Points: ' +points;
+        localStorage.setItem('foodPoints' , points);
+
+        food.style.transform = `translate(${Math.random()*200-100}px , ${Math.random()*200-100}px)`;
+        const randomIndex = Math.floor(Math.random() * foods.length);
+        food.src = foods[randomIndex]
+
+        if(points >= 10){
+            BigImg.src = foods[randomIndex];
+            BigImg.style.display = "block";
+            win.style.display = "block";
+
+            BigImg.onclick = () => {
+                points = 0;
+                pointDisplay.textContent = 'Points: ' + points;
+                BigImg.style.display = "none";
+                win.style.display = "none";
+            };
+
+        }
+    });
+</script>
+<script src="nav.js"></script>
+</html>

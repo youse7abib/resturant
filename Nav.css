@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color:#012 ;
+    justify-content: space-around;    
+}
+.logo img{
+    width: 200px;
+}
+
+.menu{
+  display: flex;
+  background-color: rgba(255, 166, 0, 0.788);
+  width: max-content;
+  height: 50px;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 50px;
+
+}
+
+ul{
+   list-style: none;
+   position: relative;
+   text-transform: capitalize; 
+   display: flex;
+   padding: 10px;
+   margin: 10px;
+
+}
+
+ul li a{
+    display: flex;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px 0;
+    align-items: center;
+    gap: 10px;
+    transition: 0.5;
+}
+ul li a:hover , ul li a i:hover{
+    color: #fff;
+    background-color: rgb(17, 34, 51);
+    border-radius: 20px;
+    i{
+        color: white;
+    }
+}
+
+
+ul li a i{
+    color: #012;
+}
+
+
+.game{
+    background-color: rgb(0, 68, 255);
+    border-radius: 15px;
+
+}
+.game a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.game a button{
+    outline: 0;
+    border: 0;
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: orange;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+    font-size: 30px !important;
+    font-weight: bold;
+
+}
+.game a i{
+    color: orange;
+    padding-right: 10px;
+    font-size: 30px !important;
+    
+}
+.game button:hover{
+    rotate: calc(360deg);
+    font-size: 30px;
+    color: brown;
+}
+
+/* @media (min-width:920px) , (max-width:1024px) {
+    .game a button{
+        width: 50px;
+        font-size: 25px !important;
+    }
+    .game a i{
+        display: none;
+    }
+} */
+
+@media  (max-width: 768px) , (max-width:920px) {
+    .menu{
+       position: absolute;
+       top: 105px;
+       left: 0;
+       width: 100%;
+       background-color: rgba(255, 166, 0, 0.95);
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       overflow: hidden;
+       transition: heigh 0.4s ease;
+    }
+}
+
+
+@media  (max-width: 500px) {
+    .menu{
+       position: absolute;
+       top: 105px;
+       left: 0;
+       width: 100%;
+       background-color: rgba(255, 166, 0, 0.95);
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       overflow: hidden;
+       transition: heigh 0.4s ease;
+       display: flex;
+
+    }
+}
